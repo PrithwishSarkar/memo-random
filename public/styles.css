@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #ffffe6;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+  /* max-height: 100vh; */
+  /* padding: 0 16px; */
+}
+header {
+  background-color: #ffcc00;
+  height: 8vh;
+  /* margin: auto -16px; */
+  /* padding: 16px 32px; */
+  padding: 0 32px;
+  box-shadow: 0 0 1.5vh 0 rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1,
+header h2 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+  
+}
+main {
+  height: 85vh;
+  overflow: scroll;
+  padding: 16px 32px;
+  
+}
+.about{
+  height: 85vh;
+  padding: 16px 32px;
+  text-align: center;
+  color: black;
+}
+footer {
+  background-color: #ffcc00;
+  height: 7vh;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  background-color: #ffff80;
+  text-align: center;
+  border-radius: 5px;
+
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+form {
+  position: relative;
+  width: 480px;
+  margin: 20px auto;
+  /* margin-bottom: 20px; */
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.1em;
+  font-family: inherit;
+  resize: none;
+}
+
+form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #ffcc00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.note button {
+  position: relative;
+  float: right;
+  bottom: -27px;
+  margin-right: 10px;
+  background: #ffcc00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover{
+  background: #e6e600;
+}
+
+@media only screen and (max-width: 850px) {
+  footer {
+    padding: 0 16px;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 1.5em;
+    /* font-weight: 200; */
+  }
+  main {
+    padding: 16px;
+  }
+  form{
+    width: 100%;
+  }
+}
