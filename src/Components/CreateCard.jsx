@@ -1,22 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddIcon from '@mui/icons-material/Add';
 
-export default function CreateCard({ addNew }) {
+export default function CreateCard(props) {
+  // let edit=props.cnd;
+  //console.log(props.t);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  // const [txt, setTxt] = useState("Take a note...");
   const [clik, setClik] = useState(false);
-  
 
-
+  useEffect(() => {
+    setTitle(props.t);
+  }, [props.t]);
+  useEffect(() => {
+    setContent(props.c);
+  }, [props.c]);  
+  useEffect(() => {
+    setClik(props.cnd);
+  }, [props.cnd]);
+ 
   function btnClick(e) {
     e.preventDefault();
     if (!title || !content) alert("Title and Content cannot be empty.");
-    else {addNew(title, content);
+    else {props.addNew(title, content);
     setTitle("");
     setContent("")
     setClik(false);
   }}
+
+  // if(props.cnd){
+  //   console.log("in if");
+  //   console.log(props.t);
+  //   console.log(props.c);
+
+  //   setClik(true);
+  //   setTitle(props.t);
+  //   setContent(props.c);
+  // }
+
   
   return (
     <div>

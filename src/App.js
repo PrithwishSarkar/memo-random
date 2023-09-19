@@ -1,7 +1,7 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import About from "./Components/About";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Main from "./Components/Main";
 import {
   BrowserRouter,
@@ -11,8 +11,18 @@ import {
 
 
 export default function App() {
+  // let initTime;
+  // if (localStorage.getItem("somoy") === null)
+  //   initTime = new Date();
+  // else{
+  //   initTime = new Date(localStorage.getItem("somoy"));
+  // }
+    
   const [newTime, setTime] = useState(new Date());
   
+  // useEffect(() => {
+  //   localStorage.setItem("somoy", new Date().toString());
+  // }, [newTime]);
   return (
     <div>
       <BrowserRouter>

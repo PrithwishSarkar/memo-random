@@ -111,11 +111,9 @@ form button {
   cursor: pointer;
   outline: none;
 }
-.note button {
+.note button{
   position: relative;
-  float: right;
   bottom: -27px;
-  margin-right: 10px;
   background: #ffcc00;
   color: #fff;
   border: none;
@@ -124,6 +122,14 @@ form button {
   height: 36px;
   cursor: pointer;
   outline: none;
+}
+#del{
+  float: right;
+  margin-right: 10px;
+}
+#edit{
+  float: left;
+  margin-left: 10px;
 }
 
 button:hover{
